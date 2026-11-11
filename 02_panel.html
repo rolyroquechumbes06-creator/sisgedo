@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panel de control | SISGEDO</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/panel.js" defer></script>
+  </head>
+  <body data-page="1">
+    <a class="skip-link" href="#principal">Ir al contenido</a>
+    <div class="layout">
+      <aside class="sidebar">
+        <a class="brand" href="02_panel.html"><img class="logo" src="img/logo.svg" width="44" height="44" alt="">
+        <div>
+          <strong>SISGEDO</strong><p>ISTP Argentina</p>
+        </div>
+        </a>
+        <div class="nav-label">
+          MENÚ PRINCIPAL
+        </div>
+        <nav class="nav" aria-label="Menú principal">
+          <a href="02_panel.html" class="active" aria-current="page"><span class="navicon" aria-hidden="true">▦</span><span class="navtext">Panel de control</span></a><a href="03_registrar.html"><span class="navicon" aria-hidden="true">＋</span><span class="navtext">Registrar documento</span></a><a href="04_documentos.html"><span class="navicon" aria-hidden="true">▤</span><span class="navtext">Gestión documental</span></a><a href="05_seguimiento.html"><span class="navicon" aria-hidden="true">⇄</span><span class="navtext">Seguimiento</span></a>
+        </nav>
+        <div class="sidebar-foot">
+          Sistema de Gestión Documental<br>IESTP Argentina · 2026
+        </div>
+      </aside>
+      <main id="principal" tabindex="-1">
+        <header class="topbar">
+          <div class="crumb">
+            SISGEDO / <strong>Panel de control</strong>
+          </div>
+          <div class="user">
+            <div class="avatar" id="avatar">
+              AD
+            </div>
+            <span id="role">Administrador</span><a class="logout" id="logout" href="01_login.html">Salir</a>
+          </div>
+        </header>
+        <div class="content">
+          <noscript>
+            <p class="notice">Activa JavaScript para usar las funciones de la demo.</p>
+          </noscript>
+          <p class="notice" id="storage-warning" hidden></p>
+          <header class="welcome">
+            <div>
+              <div class="eyebrow">
+                VISTA GENERAL
+              </div>
+              <h1>¡Bienvenido al SISGEDO!</h1><p>Instituto de Educación Superior Tecnológico Público Argentina</p>
+            </div>
+            <a class="btn " href="03_registrar.html">＋ Registrar documento</a>
+          </header>
+          <div class="cards" aria-label="Resumen de expedientes">
+            <article class="stat">
+              <div class="stat-top">
+                <span>Documentos recibidos</span><span class="stat-icon" aria-hidden="true">▤</span>
+              </div>
+              <strong class="stat-number" id="metric-0">0</strong><small>Registrados en el sistema</small>
+            </article>
+            <article class="stat">
+              <div class="stat-top">
+                <span>En trámite</span><span class="stat-icon" aria-hidden="true">↻</span>
+              </div>
+              <strong class="stat-number" id="metric-1">0</strong><small>En proceso o derivados</small>
+            </article>
+            <article class="stat">
+              <div class="stat-top">
+                <span>Atendidos</span><span class="stat-icon" aria-hidden="true">✓</span>
+              </div>
+              <strong class="stat-number" id="metric-2">0</strong><small>Con atención concluida</small>
+            </article>
+            <article class="stat">
+              <div class="stat-top">
+                <span>Pendientes</span><span class="stat-icon" aria-hidden="true">◷</span>
+              </div>
+              <strong class="stat-number" id="metric-3">0</strong><small>Por iniciar atención</small>
+            </article>
+          </div>
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Documentos recientes</h2><p>Últimos expedientes ingresados</p>
+              </div>
+              <a class="btn secondary" href="04_documentos.html">Ver todos →</a>
+            </div>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="Tabla de expedientes">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">N.° EXPEDIENTE</th><th scope="col">ASUNTO</th><th scope="col">REMITENTE</th><th scope="col">ÁREA DESTINO</th><th scope="col">FECHA</th><th scope="col">ESTADO</th><th scope="col">DETALLE</th>
+                  </tr>
+                </thead>
+                <tbody id="rows">
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <div class="dashboard-lower">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h2>Expedientes por estado</h2><p>Distribución de los documentos registrados</p>
+                </div>
+              </div>
+              <div class="panel-body distribution" id="status-breakdown">
+              </div>
+            </section>
+            <div class="bottom-grid">
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <h2>Actividad reciente</h2><p>Últimos movimientos registrados</p>
+                  </div>
+                </div>
+                <div class="activity" id="activity">
+                </div>
+              </section>
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <h2>Accesos rápidos</h2><p>Funciones frecuentes</p>
+                  </div>
+                </div>
+                <div class="shortcut">
+                  <a class="quick" href="03_registrar.html"><span class="qicon" aria-hidden="true">＋</span><b>Nuevo documento</b><small>Registrar expediente</small></a><a class="quick" href="04_documentos.html"><span class="qicon" aria-hidden="true">⌕</span><b>Buscar documento</b><small>Consultar el listado</small></a><a class="quick" href="05_seguimiento.html"><span class="qicon" aria-hidden="true">⇄</span><b>Seguir trámite</b><small>Consultar por código</small></a><a class="quick" href="06_detalle.html?id=EXP-2026-00128"><span class="qicon" aria-hidden="true">▣</span><b>Ver expediente</b><small>Explorar el detalle demo</small></a>
+                </div>
+              </section>
+            </div>
+          </div>
+          <footer>
+            © 2026 ISTP Argentina · SISGEDO · Prototipo académico
+          </footer>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

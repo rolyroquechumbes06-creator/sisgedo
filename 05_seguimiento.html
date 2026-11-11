@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seguimiento | SISGEDO</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/seguimiento.js" defer></script>
+  </head>
+  <body data-page="4">
+    <a class="skip-link" href="#principal">Ir al contenido</a>
+    <div class="layout">
+      <aside class="sidebar">
+        <a class="brand" href="02_panel.html"><img class="logo" src="img/logo.svg" width="44" height="44" alt="">
+        <div>
+          <strong>SISGEDO</strong><p>ISTP Argentina</p>
+        </div>
+        </a>
+        <div class="nav-label">
+          MENÚ PRINCIPAL
+        </div>
+        <nav class="nav" aria-label="Menú principal">
+          <a href="02_panel.html"><span class="navicon" aria-hidden="true">▦</span><span class="navtext">Panel de control</span></a><a href="03_registrar.html"><span class="navicon" aria-hidden="true">＋</span><span class="navtext">Registrar documento</span></a><a href="04_documentos.html"><span class="navicon" aria-hidden="true">▤</span><span class="navtext">Gestión documental</span></a><a href="05_seguimiento.html" class="active" aria-current="page"><span class="navicon" aria-hidden="true">⇄</span><span class="navtext">Seguimiento</span></a>
+        </nav>
+        <div class="sidebar-foot">
+          Sistema de Gestión Documental<br>IESTP Argentina · 2026
+        </div>
+      </aside>
+      <main id="principal" tabindex="-1">
+        <header class="topbar">
+          <div class="crumb">
+            SISGEDO / <strong>Seguimiento</strong>
+          </div>
+          <div class="user">
+            <div class="avatar" id="avatar">
+              AD
+            </div>
+            <span id="role">Administrador</span><a class="logout" id="logout" href="01_login.html">Salir</a>
+          </div>
+        </header>
+        <div class="content">
+          <noscript>
+            <p class="notice">Activa JavaScript para usar las funciones de la demo.</p>
+          </noscript>
+          <p class="notice" id="storage-warning" hidden></p>
+          <header class="welcome">
+            <div>
+              <div class="eyebrow">
+                TRÁMITE DOCUMENTARIO
+              </div>
+              <h1>Seguimiento de trámites</h1><p>Consulta el área responsable y el historial de un expediente.</p>
+            </div>
+            <a class="btn secondary" href="04_documentos.html">Ver documentos →</a>
+          </header>
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Buscar expediente</h2><p>Puedes probar con el código EXP-2026-00128.</p>
+              </div>
+            </div>
+            <form class="filters" id="track-form">
+              <label class="field"><span>Código de expediente</span><input name="code" id="code" required placeholder="EXP-2026-00128" maxlength="40" autocomplete="off"></label><button class="btn" type="submit">Consultar</button>
+            </form>
+          </section>
+          <div id="track-result" aria-live="polite">
+          </div>
+          <footer>
+            © 2026 ISTP Argentina · SISGEDO · Prototipo académico
+          </footer>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

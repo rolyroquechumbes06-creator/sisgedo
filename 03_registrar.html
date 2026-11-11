@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrar documento | SISGEDO</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/registro.js" defer></script>
+  </head>
+  <body data-page="2">
+    <a class="skip-link" href="#principal">Ir al contenido</a>
+    <div class="layout">
+      <aside class="sidebar">
+        <a class="brand" href="02_panel.html"><img class="logo" src="img/logo.svg" width="44" height="44" alt="">
+        <div>
+          <strong>SISGEDO</strong><p>ISTP Argentina</p>
+        </div>
+        </a>
+        <div class="nav-label">
+          MENÚ PRINCIPAL
+        </div>
+        <nav class="nav" aria-label="Menú principal">
+          <a href="02_panel.html"><span class="navicon" aria-hidden="true">▦</span><span class="navtext">Panel de control</span></a><a href="03_registrar.html" class="active" aria-current="page"><span class="navicon" aria-hidden="true">＋</span><span class="navtext">Registrar documento</span></a><a href="04_documentos.html"><span class="navicon" aria-hidden="true">▤</span><span class="navtext">Gestión documental</span></a><a href="05_seguimiento.html"><span class="navicon" aria-hidden="true">⇄</span><span class="navtext">Seguimiento</span></a>
+        </nav>
+        <div class="sidebar-foot">
+          Sistema de Gestión Documental<br>IESTP Argentina · 2026
+        </div>
+      </aside>
+      <main id="principal" tabindex="-1">
+        <header class="topbar">
+          <div class="crumb">
+            SISGEDO / <strong>Registrar documento</strong>
+          </div>
+          <div class="user">
+            <div class="avatar" id="avatar">
+              AD
+            </div>
+            <span id="role">Administrador</span><a class="logout" id="logout" href="01_login.html">Salir</a>
+          </div>
+        </header>
+        <div class="content">
+          <noscript>
+            <p class="notice">Activa JavaScript para usar las funciones de la demo.</p>
+          </noscript>
+          <p class="notice" id="storage-warning" hidden></p>
+          <header class="welcome">
+            <div>
+              <div class="eyebrow">
+                MESA DE PARTES
+              </div>
+              <h1>Registrar documento</h1><p>Ingresa los datos para crear un expediente.</p>
+            </div>
+            <a class="btn secondary" href="04_documentos.html">← Ver documentos</a>
+          </header>
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Datos del documento</h2><p>Los campos con asterisco son obligatorios.</p>
+              </div>
+            </div>
+            <form id="register-form" class="panel-body">
+              <div class="formgrid">
+                <label class="field"><span>Tipo de documento *</span><select name="type" required><option value="">Seleccionar tipo</option><option>Solicitud</option><option>Oficio</option><option>Informe</option><option>Memorando</option><option>Carta</option></select></label><label class="field"><span>Remitente *</span><input name="sender" required maxlength="100" placeholder="Nombre de la persona o área"></label><label class="field full"><span>Asunto *</span><input name="subject" required maxlength="160" placeholder="Descripción breve del documento"></label><label class="field"><span>Área de destino *</span><select name="area" required><option value="">Seleccionar área</option><option>Dirección General</option><option>Secretaría Académica</option><option>Administración</option><option>Área de Computación</option><option>Mesa de partes</option><option>Unidad de Bienestar</option></select></label><label class="field"><span>Prioridad</span><select name="priority"><option>Normal</option><option>Urgente</option></select></label><label class="field full"><span>Observaciones</span><textarea name="notes" maxlength="600" rows="4" placeholder="Información adicional"></textarea></label>
+              </div>
+              <p id="feedback" class="error" role="alert" hidden></p>
+              <div class="form-actions">
+                <a class="btn secondary" href="04_documentos.html">Cancelar</a><button class="btn" type="submit">Guardar documento</button>
+              </div>
+            </form>
+          </section>
+          <footer>
+            © 2026 ISTP Argentina · SISGEDO · Prototipo académico
+          </footer>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

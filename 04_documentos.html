@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestión documental | SISGEDO</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/documentos.js" defer></script>
+  </head>
+  <body data-page="3">
+    <a class="skip-link" href="#principal">Ir al contenido</a>
+    <div class="layout">
+      <aside class="sidebar">
+        <a class="brand" href="02_panel.html"><img class="logo" src="img/logo.svg" width="44" height="44" alt="">
+        <div>
+          <strong>SISGEDO</strong><p>ISTP Argentina</p>
+        </div>
+        </a>
+        <div class="nav-label">
+          MENÚ PRINCIPAL
+        </div>
+        <nav class="nav" aria-label="Menú principal">
+          <a href="02_panel.html"><span class="navicon" aria-hidden="true">▦</span><span class="navtext">Panel de control</span></a><a href="03_registrar.html"><span class="navicon" aria-hidden="true">＋</span><span class="navtext">Registrar documento</span></a><a href="04_documentos.html" class="active" aria-current="page"><span class="navicon" aria-hidden="true">▤</span><span class="navtext">Gestión documental</span></a><a href="05_seguimiento.html"><span class="navicon" aria-hidden="true">⇄</span><span class="navtext">Seguimiento</span></a>
+        </nav>
+        <div class="sidebar-foot">
+          Sistema de Gestión Documental<br>IESTP Argentina · 2026
+        </div>
+      </aside>
+      <main id="principal" tabindex="-1">
+        <header class="topbar">
+          <div class="crumb">
+            SISGEDO / <strong>Gestión documental</strong>
+          </div>
+          <div class="user">
+            <div class="avatar" id="avatar">
+              AD
+            </div>
+            <span id="role">Administrador</span><a class="logout" id="logout" href="01_login.html">Salir</a>
+          </div>
+        </header>
+        <div class="content">
+          <noscript>
+            <p class="notice">Activa JavaScript para usar las funciones de la demo.</p>
+          </noscript>
+          <p class="notice" id="storage-warning" hidden></p>
+          <header class="welcome">
+            <div>
+              <div class="eyebrow">
+                ARCHIVO INSTITUCIONAL
+              </div>
+              <h1>Gestión documental</h1><p>Busca y consulta los expedientes registrados.</p>
+            </div>
+            <a class="btn " href="03_registrar.html">＋ Registrar documento</a>
+          </header>
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Lista de documentos</h2><p>Filtra por código, asunto, remitente o estado.</p>
+              </div>
+              <button class="btn secondary" id="export-csv" type="button">↓ Exportar CSV</button>
+            </div>
+            <div class="filters">
+              <label class="field"><span>Buscar expediente</span><input type="search" id="search" placeholder="Código, asunto o remitente"></label><label class="field"><span>Estado</span><select id="filter-status"><option value="">Todos los estados</option><option>Pendiente</option><option>En proceso</option><option>Derivado</option><option>Atendido</option></select></label><button class="btn secondary" id="clear" type="button">Limpiar filtros</button>
+            </div>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="Tabla de expedientes">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">N.° EXPEDIENTE</th><th scope="col">ASUNTO</th><th scope="col">REMITENTE</th><th scope="col">ÁREA DESTINO</th><th scope="col">FECHA</th><th scope="col">ESTADO</th><th scope="col">DETALLE</th>
+                  </tr>
+                </thead>
+                <tbody id="rows">
+                </tbody>
+              </table>
+            </div>
+            <div class="table-footer" id="result-count" role="status">
+            </div>
+          </section>
+          <footer>
+            © 2026 ISTP Argentina · SISGEDO · Prototipo académico
+          </footer>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

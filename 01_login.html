@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio de sesión | SISGEDO</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/login.js" defer></script>
+  </head>
+  <body data-page="0">
+    <main class="login">
+      <section class="login-intro">
+        <div class="brand">
+          <img class="logo" src="img/logo.svg" width="44" height="44" alt="">
+          <div>
+            <strong>SISGEDO</strong><p>ISTP Argentina</p>
+          </div>
+        </div>
+        <div class="login-copy">
+          <div class="eyebrow">
+            GESTIÓN DOCUMENTAL INSTITUCIONAL
+          </div>
+          <h1>Gestión de documentos y trámites</h1><p>Registra expedientes, consulta su estado y revisa los movimientos de cada trámite desde un solo lugar.</p>
+        </div>
+        <img class="login-art" src="img/expedientes.svg" width="510" height="263" alt=""><p class="login-footer">ISTP Argentina · Proyecto académico 2026</p>
+      </section>
+      <section class="login-main">
+        <div class="login-form">
+          <h2>Iniciar sesión</h2><p>Selecciona tu perfil e ingresa tus credenciales.</p>
+          <noscript>
+            <p class="notice">Activa JavaScript para acceder.</p>
+          </noscript>
+          <form id="login-form">
+            <label class="field"><span>Perfil</span><select name="role"><option>Administrador</option><option>Personal de mesa de partes</option></select></label><label class="field"><span>Usuario</span><input name="user" required autocomplete="username" autocapitalize="none" spellcheck="false"></label><div class="field">
+            <label for="password">Contraseña</label>
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" required autocomplete="current-password">
+              <button type="button" class="password-toggle" id="toggle-password" aria-controls="password" aria-pressed="false">Mostrar</button>
+            </div>
+          </div><p id="feedback" class="error" role="alert" hidden></p><button class="btn" type="submit">Ingresar al sistema <span aria-hidden="true">→</span></button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
